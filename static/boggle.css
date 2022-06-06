@@ -1,0 +1,28 @@
+.board-div {
+    /* border: solid 5px black; */
+    font-weight: 500;
+    font-size: 40px;
+    
+}
+
+.board-div td {
+    text-align: center;
+    padding: 20px;
+    border: solid 2px black;
+    border-radius: 10%;
+}
+
+.data-div {
+    border: solid 3px green;
+    width: 400px;
+    height: 400px;
+    border-radius: 10%;
+}
+
+.form {
+    padding: 20px;
+}
+
+p {
+    padding-left: 10px;
+}

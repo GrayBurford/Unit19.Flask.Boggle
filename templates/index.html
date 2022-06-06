@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boggle Game</title>
+    <link rel="stylesheet" href="/static/boggle.css">
+</head>
+<body>
+    <!-- DISPLAY BOARD -->
+    <div>
+
+        <table class="board-div">
+            <tbody>
+              {% for row in board %}
+              <tr>
+                {% for letter in row %}
+                <td>{{ letter }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+    </div>
+    <br>
+
+    <!-- DISPLAY FORM & DATA -->
+    <div class="data-div">
+
+        <form method="POST" class="form">
+            <input type="text" name="form-word-input" class="form-word-input" autofocus>
+            <button>Check word</button>
+        </form>
+
+        <p>Time left:
+            <span class="time"></span>
+        </p>
+        <p>Times played: {{times_played}} </p>
+        <p>High score: {{highscore}} </p>
+        <p>Current score: 
+            <span class="score"> 0 </span>
+        </p>
+        <p>Current message:
+            <span class="msg"></span>
+        </p>
+        <br>
+        <ul class="words-list">Words found: 
+            <!-- Append valid words here as LIs -->
+        </ul>
+
+    </div>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/boggle.js"></script>
+</body>
+</html>
